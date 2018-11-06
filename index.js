@@ -2,10 +2,13 @@ const debug = require('debug')('norm-ddl:adapters:mysql');
 
 const TYPES = {
   nstring: 'VARCHAR(255)',
+  nreference: 'VARCHAR(255)',
   ninteger: 'INT',
+  ndouble: 'DOUBLE',
   ndatetime: 'DATETIME',
   nboolean: 'TINYINT',
   nlist: 'TEXT',
+  nmap: 'TEXT',
 };
 
 module.exports = class Sqlite {
