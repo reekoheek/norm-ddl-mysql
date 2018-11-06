@@ -1,0 +1,22 @@
+{
+  "name": "norm-ddl-mysql",
+  "version": "0.0.1",
+  "description": "Mysql norm ddl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reekoheek/norm-ddl-mysql.git"
+  },
+  "author": "Ganesha <reekoheek@gmail.com> (http://sagara.id)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reekoheek/norm-ddl-mysql/issues"
+  },
+  "homepage": "https://github.com/reekoheek/norm-ddl-mysql#readme",
+  "dependencies": {
+    "norm-ddl": "^0.1.1"
+  }
+}
