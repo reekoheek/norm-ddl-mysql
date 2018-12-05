@@ -1,6 +1,6 @@
 {
   "name": "norm-ddl-mysql",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mysql norm ddl",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "url": "https://github.com/reekoheek/norm-ddl-mysql/issues"
   },
   "homepage": "https://github.com/reekoheek/norm-ddl-mysql#readme",
-  "dependencies": {
+  "peerDependencies": {
     "norm-ddl": "^0.1.1"
   }
 }

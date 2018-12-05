@@ -1,6 +1,6 @@
 const debug = require('debug')('norm-ddl:adapters:mysql');
 
-const TYPES = {
+const DEFAULT_TYPES = {
   nstring: 'VARCHAR(255)',
   nreference: 'VARCHAR(255)',
   ninteger: 'INT',
@@ -9,13 +9,18 @@ const TYPES = {
   nboolean: 'TINYINT',
   nlist: 'TEXT',
   nmap: 'TEXT',
+  ntext: 'TEXT',
 };
 
-module.exports = class Sqlite {
+module.exports = class Mysql {
+  constructor ({ types } = {}) {
+    this.types = Object.assign({}, DEFAULT_TYPES, types);
+  }
+
   async define (schema, connection) {
     let fieldLines = schema.fields.map(field => {
       let schemaType = field.constructor.name.toLowerCase();
-      let dataType = TYPES[schemaType];
+      let dataType = this.types[schemaType];
       if (!dataType) {
         throw new Error(`Unknown data type mapping from ${schemaType}`);
       }
