@@ -10,6 +10,7 @@ const DEFAULT_TYPES = {
   nlist: 'TEXT',
   nmap: 'TEXT',
   ntext: 'TEXT',
+  nbig: 'DECIMAL(15,8)'
 };
 
 module.exports = class Mysql {
